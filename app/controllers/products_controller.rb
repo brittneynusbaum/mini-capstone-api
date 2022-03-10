@@ -7,4 +7,5 @@ class ProductsController < ApplicationController
 end
 
 
+
 # {message: "Your first product is:"}
