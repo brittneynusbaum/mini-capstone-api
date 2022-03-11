@@ -6,6 +6,13 @@ GET http://localhost:3000/products/1
 
 ###
 POST http://localhost:3000/products
+content-type: application/json
 
+{
+  "input_name": "shoes",
+  "input_price": "300",
+  "input_image_url": "https://www.expensive-world.com/wp-content/uploads/2020/07/expensive-shoes.jpg",
+  "input_description": "These gold-plated shoes will have you walking on air!"
+}
 
 

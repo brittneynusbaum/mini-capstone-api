@@ -11,16 +11,16 @@ class ProductsController < ApplicationController
   end
 
   def create
-    pants = Product.new(
-      name: "pants",
-      price: "20.99",
-      image_url: "https://www.lafuma.com/media/catalog/product/cache/18/image/9df78eab33525d08d6e5fb8d27136e95/l/f/lfv11349-8604-pantalon-femme-access-pants-w-gris_1.jpg",
-      description: "These pants were made for walkin!"
+    shoes = Product.new(
+      name: params[:input_name],
+      price: params[:input_price],
+      image_url: params[:input_image_url],
+      description: params[:input_description]
     )
 
-    pants.save
+    shoes.save
     
-    render json: pants.to_json
+    render json: shoes.to_json
   end
 
 end
