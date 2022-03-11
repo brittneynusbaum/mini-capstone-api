@@ -1,1 +1,7 @@
 GET http://localhost:3000/bike
+
+###
+GET http://localhost:3000/body_product
+
+###
+GET http://localhost:3000/body_product

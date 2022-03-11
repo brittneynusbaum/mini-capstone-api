@@ -15,3 +15,7 @@ bike = Product.new(
 )
 
 bike.save
+
+shirt = Product.create(name: "T-shirt", price: "25.99", image_url: "https://i.etsystatic.com/20863131/r/il
+  /917fad/2075104115/il_fullxfull.2075104115_r9c2.jpg", description: "Want everyone to know you're a coder without saying a
+  word? Say no more - we've got the shirt for you!")
