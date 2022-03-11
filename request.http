@@ -1,7 +1,11 @@
-GET http://localhost:3000/bike
+GET http://localhost:3000/products
 
 ###
-GET http://localhost:3000/body_product
+GET http://localhost:3000/products/1
+
 
 ###
-GET http://localhost:3000/body_product
+POST http://localhost:3000/products
+
+
+
