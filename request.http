@@ -15,4 +15,13 @@ content-type: application/json
   "input_description": "These gold-plated shoes will have you walking on air!"
 }
 
+###
+PATCH http://localhost:3000/products/5
+content-type: application/json
 
+{
+  "input_name": "Hat",
+  "input_price": 13,
+  "input_image_url": "https://www.ikea.com/us/en/images/products/knorva-hat-blue__0812162_pe771942_s5.jpg",
+  "input_description": "Love IKEA and bucket hats? This is the hat for you!"
+}

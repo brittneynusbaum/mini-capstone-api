@@ -5,9 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    product_id = params[:id]
-    bike = Product.find_by(id: product_id)
-    render json: bike.to_json
+    product = Product.find_by(id: params[:id])
+    render json: product.to_json
   end
 
   def create
@@ -21,6 +20,18 @@ class ProductsController < ApplicationController
     shoes.save
     
     render json: shoes.to_json
+  end
+
+  def update
+    product = Product.find_by(id: params[:id])
+    product.name = params[:input_name]
+    product.price = params[:input_price]
+    product.image_url = params[:input_image_url]
+    product.description = params[:input_description]
+    render json: product.to_json
+    ## getting ActionController::RoutingError (No route matches [PATCH] "/products/5"):
+    # means there was an issue with the link in requests.http
+    product.save
   end
 
 end
