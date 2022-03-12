@@ -11,10 +11,10 @@ class ProductsController < ApplicationController
 
   def create
     shoes = Product.new(
-      name: params[:input_name],
-      price: params[:input_price],
-      image_url: params[:input_image_url],
-      description: params[:input_description]
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description]
     )
 
     shoes.save
@@ -24,14 +24,20 @@ class ProductsController < ApplicationController
 
   def update
     product = Product.find_by(id: params[:id])
-    product.name = params[:input_name]
-    product.price = params[:input_price]
-    product.image_url = params[:input_image_url]
-    product.description = params[:input_description]
+    product.name = params[:name]
+    product.price = params[:price]
+    product.image_url = params[:image_url]
+    product.description = params[:description]
     render json: product.to_json
     ## getting ActionController::RoutingError (No route matches [PATCH] "/products/5"):
     # means there was an issue with the link in requests.http
     product.save
+  end
+
+  def destroy
+    product = Product.find_by(id: params[:id])
+    product.destroy
+    render json: {message: "Product #{params[:id]} was deleted."}
   end
 
 end

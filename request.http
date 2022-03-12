@@ -1,7 +1,9 @@
 GET http://localhost:3000/products
+# all products
 
 ###
 GET http://localhost:3000/products/1
+# one product
 
 
 ###
@@ -9,19 +11,27 @@ POST http://localhost:3000/products
 content-type: application/json
 
 {
-  "input_name": "shoes",
-  "input_price": "300",
-  "input_image_url": "https://www.expensive-world.com/wp-content/uploads/2020/07/expensive-shoes.jpg",
-  "input_description": "These gold-plated shoes will have you walking on air!"
+  "name": "shoes",
+  "price": "300",
+  "image_url": "https://www.expensive-world.com/wp-content/uploads/2020/07/expensive-shoes.jpg",
+  "description": "These gold-plated shoes will have you walking on air!"
 }
+
+#creates new product
 
 ###
 PATCH http://localhost:3000/products/5
 content-type: application/json
 
 {
-  "input_name": "Hat",
-  "input_price": 13,
-  "input_image_url": "https://www.ikea.com/us/en/images/products/knorva-hat-blue__0812162_pe771942_s5.jpg",
-  "input_description": "Love IKEA and bucket hats? This is the hat for you!"
+  "name": "Hat",
+  "price": 13,
+  "image_url": "https://www.ikea.com/us/en/images/products/knorva-hat-blue__0812162_pe771942_s5.jpg",
+  "description": "Love IKEA and bucket hats? This is the hat for you!"
 }
+
+# updates product
+
+###
+DELETE http://localhost:3000/products/1
+#deletes product
