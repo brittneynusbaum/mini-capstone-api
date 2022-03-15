@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   
   def index
-    render json: Product.all.to_json
+    product = Product.all
+    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
   end
 
   def show
@@ -18,7 +19,6 @@ class ProductsController < ApplicationController
     )
 
     shoes.save
-    
     render json: shoes.to_json
   end
 
@@ -37,11 +37,7 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find_by(id: params[:id])
     product.destroy
-    render json: {message: "Product #{params[:id]} was deleted."}
+    render json: {message: "test"}
   end
 
 end
-
-
-
-# {message: "Your first product is:"}
