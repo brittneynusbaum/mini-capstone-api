@@ -1,43 +1,42 @@
 class ProductsController < ApplicationController
   
   def index
-    product = Product.all
-    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
+    @product = Product.all
+    render template: "products/index"
   end
 
   def show
-    product = Product.find_by(id: params[:id])
-    render json: product.to_json
+    @product = Product.find_by(id: params[:id])
+    render template: "products/show"
   end
 
   def create
-    shoes = Product.new(
+    @product = Product.new(
       name: params[:name],
       price: params[:price],
       image_url: params[:image_url],
       description: params[:description]
     )
 
-    shoes.save
-    render json: shoes.to_json
+    @product.save
+    render template: "products/show"
   end
 
   def update
-    product = Product.find_by(id: params[:id])
-    product.name = params[:name]
-    product.price = params[:price]
-    product.image_url = params[:image_url]
-    product.description = params[:description]
-    render json: product.to_json
-    ## getting ActionController::RoutingError (No route matches [PATCH] "/products/5"):
-    # means there was an issue with the link in requests.http
-    product.save
+    @product = Product.find_by(id: params[:id])
+    @product.name = params[:name] || @product.name
+    @product.price = params[:price] || @product.price
+    @product.image_url = params[:image_url] || @product.image_url
+    @product.description = params[:description] || @product.description
+
+    @product.save
+    render template: "products/show"
   end
 
   def destroy
     product = Product.find_by(id: params[:id])
     product.destroy
-    render json: {message: "test"}
+    render json: {message: "product was deleted"}
   end
 
 end
