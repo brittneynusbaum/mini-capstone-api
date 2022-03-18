@@ -15,14 +15,16 @@ class ProductsController < ApplicationController
       name: params[:name],
       price: params[:price],
       image_url: params[:image_url],
-      description: params[:description]
+      description: params[:description],
+      supplier_id: params[:supplier_id]
     )
+    render template: "products/show"
 
-    if @product.save
-      render template: "products/show"
-    else
-      render json: {message: @product.errors.full_messages} 
-    end
+    # if @product.save
+    #   render template: "products/show"
+    # else
+    #   render json: {message: @product.errors.full_messages} 
+    # end
   end
 
   def update
@@ -31,6 +33,7 @@ class ProductsController < ApplicationController
     @product.price = params[:price] || @product.price
     @product.image_url = params[:image_url] || @product.image_url
     @product.description = params[:description] || @product.description
+    @product.supplier_id = params[:supplier_id] || @product.supplier_id
 
     if @product.save
       render template: "products/show"
