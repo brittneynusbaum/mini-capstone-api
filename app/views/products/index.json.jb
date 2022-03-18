@@ -8,5 +8,6 @@
     updated_at: product.updated_at
     inventory: product.inventory,
     supplier_id: product.supplier_id
+    image_id: product.image_id
   }
 end
