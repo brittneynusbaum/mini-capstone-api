@@ -17,11 +17,14 @@ content-type: application/json
 }
 
 ### update
-PATCH http://localhost:3000/products/11.json
+PATCH http://localhost:3000/products/10.json
 content-type: application/json
 
 {
-  "price": 45
+  "name": "Disco Ball",
+  "price": 350,
+  "image_url": "https://ak.picdn.net/shutterstock/videos/1335892/thumb/1.jpg",
+  "description": "Perfect for when you're feeling groovy!"
 }
 
 ### destroy
