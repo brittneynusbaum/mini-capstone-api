@@ -17,14 +17,11 @@ content-type: application/json
 }
 
 ### update
-PATCH http://localhost:3000/products/5.json
+PATCH http://localhost:3000/products/11.json
 content-type: application/json
 
 {
-  "name": "Hat",
-  "price": 13,
-  "image_url": "https://www.ikea.com/us/en/images/products/knorva-hat-blue__0812162_pe771942_s5.jpg",
-  "description": "Love IKEA and bucket hats? This is the hat for you!"
+  "price": 45
 }
 
 ### destroy
