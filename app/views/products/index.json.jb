@@ -7,7 +7,6 @@
     created_at: product.created_at,
     updated_at: product.updated_at
     inventory: product.inventory,
-    supplier_id: product.supplier_id
-    image_id: product.image_id
+    supplier_id: product.supplier_id,
   }
 end
