@@ -69,3 +69,10 @@ GET http://localhost:3000/orders/1.json
 
 ### orders index
 GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgwNTU3MzN9.JcheETaUr4gRT_vdGR7vmG2uuEBAEfBva3PGENOWy-A
+Content-Type: application/json
+
+{
+  "product_id": "2",
+  "quantity": 5
+}

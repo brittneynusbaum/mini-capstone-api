@@ -8,11 +8,11 @@ class OrdersController < ApplicationController
       user_id: current_user.id,
       quantity: params[:quantity],
       subtotal: product.price * params[:quantity],
-      tax: 0.09,
-      total: (product.price * params[:quantity]) * 0.09
+      tax: 
+      total: 
     )
     order.save 
-    render json: {message: "You made a successful purchase!"}
+    render json: order.as_json
   end
 
   def show
@@ -21,8 +21,12 @@ class OrdersController < ApplicationController
   end
 
   def index
-    order = Order.all
-    render json: order.as_json
+    if current_user
+      order = 
+      render json: order.as_json
+    else
+      render json: {message: "Unauthorized user"}
+    end
   end
   
 end
