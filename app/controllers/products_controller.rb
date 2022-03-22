@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   
   def index
+    pp "current_user"
+    pp current_user
+    pp "/current_user" 
     @products = Product.all
     render template: "products/index"
   end
@@ -19,11 +22,11 @@ class ProductsController < ApplicationController
     )
     render template: "products/show"
 
-    # if @product.save
-    #   render template: "products/show"
-    # else
-    #   render json: {message: @product.errors.full_messages} 
-    # end
+    if @product.save
+      render template: "products/show"
+    else
+      render json: {message: @product.errors.full_messages} 
+    end
   end
 
   def update

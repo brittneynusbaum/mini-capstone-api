@@ -1,5 +1,6 @@
 ### index
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDc5NzM2NjB9.jVRqDkWTcLamNfC3_to_cM5xw2wU-INw_WviHA44O8s
 
 ### show
 GET http://localhost:3000/products/8.json
@@ -37,8 +38,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Frodo",
-  "email": "frodo@theonering",
+  "name": "Pippin",
+  "email": "pippin@theonering",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -49,6 +50,23 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "frodo@theonering",
+  "email": "pippin@theonering",
   "password": "password"
 }
+
+### order create
+POST http://localhost:3000/orders.json
+# Content-Type: application/json
+
+# {
+#   "name": "Pippin",
+#   "email": "pippin@theonering",
+#   "password": "password",
+#   "password_confirmation": "password"
+# }
+
+### orders show
+GET http://localhost:3000/orders/8.json
+
+### orders index
+GET http://localhost:3000/orders.json
