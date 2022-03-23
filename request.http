@@ -1,12 +1,12 @@
-### index
+### index all products
 GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDc5NzM2NjB9.jVRqDkWTcLamNfC3_to_cM5xw2wU-INw_WviHA44O8s
 
-### show product
+### show one product
 GET http://localhost:3000/products/8.json
 
 
-### create product
+### create product (admin only)
 POST http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNTc2Mzh9.LC-M02bYHg1_0eNTKWr_mkpgzLmh8neeNoBb01VYTxo
 content-type: application/json
@@ -19,16 +19,20 @@ content-type: application/json
   "supplier_id": 3
 }
 
-### update product
-PATCH http://localhost:3000/products/15.json
+### update product (admin only)
+PATCH http://localhost:3000/products/16.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
 content-type: application/json
 
 {
-  "description": "One ring to rule them all!"
+  "description": "The perfect sword for all Hobbits!"
 }
 
-### destroy
+### destroy (admin only)
 DELETE http://localhost:3000/products/6
+
+
+##-------    user actions    ------##
 
 
 ### user create (sign up)
@@ -48,11 +52,15 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "pippin@theonering",
+  "email": "sam@theonering",
   "password": "password"
 }
 
-### order create
+
+##-------    order actions     ------##
+
+
+### order create (must be logged in)
 POST http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgwNTU3MzN9.JcheETaUr4gRT_vdGR7vmG2uuEBAEfBva3PGENOWy-A
 Content-Type: application/json
