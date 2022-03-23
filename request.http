@@ -2,31 +2,29 @@
 GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDc5NzM2NjB9.jVRqDkWTcLamNfC3_to_cM5xw2wU-INw_WviHA44O8s
 
-### show
+### show product
 GET http://localhost:3000/products/8.json
 
 
-### create
+### create product
 POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNTc2Mzh9.LC-M02bYHg1_0eNTKWr_mkpgzLmh8neeNoBb01VYTxo
 content-type: application/json
 
 {
-  "name": "Computer",
-  "price": "3500",
-  "image_url": "https://media.wired.com/photos/5fb2cc575c9914713ead03de/2:3/w_1200,h_1800,c_limit/Gear-Apple-MacBook-Air-top-down-SOURCE-Apple.jpg",
-  "description": "Shiny new tech, you know you want to buy it!",
-  "supplier_id": 2
+  "name": "Sting",
+  "price": "5000",
+  "image_url": "https://static.wikia.nocookie.net/lotr/images/5/5d/Sting_with_scabbard.jpg/revision/latest?cb=20140527085852",
+  "description": "The perfect sword for a Hobbit",
+  "supplier_id": 3
 }
 
-### update
-PATCH http://localhost:3000/products/10.json
+### update product
+PATCH http://localhost:3000/products/15.json
 content-type: application/json
 
 {
-  "name": "Disco Ball",
-  "price": 350,
-  "image_url": "https://ak.picdn.net/shutterstock/videos/1335892/thumb/1.jpg",
-  "description": "Perfect for when you're feeling groovy!"
+  "description": "One ring to rule them all!"
 }
 
 ### destroy
@@ -73,6 +71,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgwNTU3M
 Content-Type: application/json
 
 {
-  "product_id": "2",
-  "quantity": 5
+  "product_id": "9",
+  "quantity": 2
 }
