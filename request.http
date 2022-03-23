@@ -8,14 +8,14 @@ GET http://localhost:3000/products/8.json
 
 ### create product (admin only)
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNTc2Mzh9.LC-M02bYHg1_0eNTKWr_mkpgzLmh8neeNoBb01VYTxo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
 content-type: application/json
 
 {
-  "name": "Sting",
-  "price": "5000",
-  "image_url": "https://static.wikia.nocookie.net/lotr/images/5/5d/Sting_with_scabbard.jpg/revision/latest?cb=20140527085852",
-  "description": "The perfect sword for a Hobbit",
+  "name": "test",
+  "price": 4,
+  "image_url": "test",
+  "description": "testing to delete later",
   "supplier_id": 3
 }
 
@@ -29,8 +29,8 @@ content-type: application/json
 }
 
 ### destroy (admin only)
-DELETE http://localhost:3000/products/6
-
+DELETE http://localhost:3000/products/17
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
 
 ##-------    user actions    ------##
 
