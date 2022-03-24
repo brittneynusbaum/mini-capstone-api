@@ -32,7 +32,9 @@ content-type: application/json
 DELETE http://localhost:3000/products/17
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
 
-##-------    user actions    ------##
+
+
+##-------    sign up/log in actions    ------##
 
 
 ### user create (sign up)
@@ -46,15 +48,15 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
-
 ### sessions create (log in)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "sam@theonering",
+  "email": "frodo@theonering",
   "password": "password"
 }
+
 
 
 ##-------    order actions     ------##
@@ -70,13 +72,13 @@ Content-Type: application/json
   "quantity": 5
 }
 
-### orders show
+### show one order (user logged in)
 GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNjE4MDl9.oT03l0lJRxqrXS230cGfd3d11kWoTQWVBMyOzxQIthg
 
-### orders index
+### index all orders (user logged in)
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgwNTU3MzN9.JcheETaUr4gRT_vdGR7vmG2uuEBAEfBva3PGENOWy-A
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNjE4MDl9.oT03l0lJRxqrXS230cGfd3d11kWoTQWVBMyOzxQIthg
 
 {
   "product_id": "9",

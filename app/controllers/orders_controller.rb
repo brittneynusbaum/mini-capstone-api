@@ -1,9 +1,12 @@
 class OrdersController < ApplicationController
 
+  before_action :authenticate_user, only: [:create, :view]
+
   def create
     calculated_subtotal = product.price * params[:quantity]
     calculated_tax = calculated_subtotal * 0.09
     product = Product.find_by(id: params[:product_id])
+
     order = Order.new(
       product_id: params[:product_id],
       user_id: current_user.id,
@@ -18,13 +21,17 @@ class OrdersController < ApplicationController
 
   def show
     order = Order.find_by(id: params[:id])
-    render json: order.as_json
+    if order.user_id == current_user.id
+      render json: order.as_json
+    else
+      render json: {}, status: :unauthorized
+    end
   end
 
   def index
-    if current_user
-      order = 
-      render json: order.as_json
+    if current_user.user_id == current_user.id
+      @orders = current_user.orders
+      render template: "orders/index"
     else
       render json: {message: "Unauthorized user"}
     end
