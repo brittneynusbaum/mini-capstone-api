@@ -29,12 +29,8 @@ class OrdersController < ApplicationController
   end
 
   def index
-    if current_user.user_id == current_user.id
-      @orders = current_user.orders
-      render template: "orders/index"
-    else
-      render json: {message: "Unauthorized user"}
-    end
+    orders = current_user.orders
+    render json: orders.as_json
   end
   
 end

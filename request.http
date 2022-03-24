@@ -53,7 +53,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "frodo@theonering",
+  "email": "pippin@theonering",
   "password": "password"
 }
 
@@ -78,9 +78,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNjE4M
 
 ### index all orders (user logged in)
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNjE4MDl9.oT03l0lJRxqrXS230cGfd3d11kWoTQWVBMyOzxQIthg
-
-{
-  "product_id": "9",
-  "quantity": 2
-}
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNzQ1NTh9.qiEo1djcLCo6uiGuKNZicYG9Khn9btnNCKMf-8vL9Ic
