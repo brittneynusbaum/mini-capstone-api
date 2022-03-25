@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :category_products
+  has_many :categories, through: :category_products
 
   validates :name, presence: true 
   validates :name, uniqueness: true
@@ -27,4 +28,11 @@ class Product < ApplicationRecord
     total = price.to_i + tax
   end
 
+  
+  # def categories
+  #   categories = []
+  #   categories.each do |p|
+  #     categories << p.category_products
+  #   end   
+  
 end

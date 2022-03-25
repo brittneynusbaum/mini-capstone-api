@@ -1,8 +1,12 @@
 class Category < ApplicationRecord
   has_many :category_products
+  has_many :products, through: :category_products
 
-  def products
-    products = 
+  # def products
+  #   categories = []
+  #   products.each do |p|
+  #     categories << p.category_products
+  #   end 
   end
 end
 
