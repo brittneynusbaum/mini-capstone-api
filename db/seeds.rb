@@ -19,9 +19,9 @@
 #   product.save
 # end
 
-# products = Product.where(supplier_id: 0)
+products = Product.where(quantity: nil)
 
-# products.each do |product|
-#   product.supplier_id = rand(1..3)
-#   product.save
-# end
+products.each do |product|
+  product.quantity = rand(10..40)
+  product.save
+end
