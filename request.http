@@ -34,6 +34,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2M
 
 
 
+
+
+
 ######## sign up/log in actions ######## 
 
 
@@ -56,6 +59,8 @@ Content-Type: application/json
   "email": "pippin@theonering",
   "password": "password"
 }
+
+
 
 
 
@@ -89,14 +94,13 @@ GET http://localhost:3000/carted_products.json
 
 ### create carted product
 POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
 Content-Type: application/json
 
 {
-  "user_id": 2,
   "product_id": 10,
-  "quantity": 1,
-  "status": "Carted"
+  "quantity": 1
 }
 
-### destroy (admin only)
+### destroy - remove carted product
 DELETE http://localhost:3000/carted_products/1
