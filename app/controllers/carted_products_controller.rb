@@ -1,7 +1,8 @@
 class CartedProductsController < ApplicationController
 
   def index
-    render json: {message: "testing index"}
+    carted_products = CartedProduct.all
+    render json: carted_products.as_json
   end
   
   def create
@@ -12,6 +13,7 @@ class CartedProductsController < ApplicationController
       status: params[:status],
       order_id: nil
     )
+    carted_product.save
     render json: carted_product.as_json
   end
 end
