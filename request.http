@@ -34,7 +34,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2M
 
 
 
-##-------    sign up/log in actions    ------##
+######## sign up/log in actions ######## 
 
 
 ### user create (sign up)
@@ -59,7 +59,7 @@ Content-Type: application/json
 
 
 
-##-------    order actions     ------##
+######## order actions ######## 
 
 
 ### order create (must be logged in)
@@ -81,14 +81,20 @@ GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNzQ1NTh9.qiEo1djcLCo6uiGuKNZicYG9Khn9btnNCKMf-8vL9Ic
 
 
+######## shopping cart ######## 
+
+### index all carted products
+GET http://localhost:3000/carted_products.json
+
+
 ### create carted product
 POST http://localhost:3000/carted_products.json
 Content-Type: application/json
 
-# {
-#   "user_id": 2,
-#   "product_id": 10,
-#   "quantity": 1,
-#   "status": "Carted",
-#   "order_id": 
-# }
+{
+  "user_id": 2,
+  "product_id": 10,
+  "quantity": 1,
+  "status": "Carted",
+  "order_id": 
+}
