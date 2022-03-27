@@ -12,9 +12,16 @@
 #   {name: "Hoodie", price: "37.0", image_url: "https://m.media-amazon.com/images/I/71hlZVUtDuL._AC_UL1500_.jpg", description: "If you're going for \"hacker in a movie\", look no further!", inventory: nil}
 # ])
 
-products = Product.where(supplier_id: 0)
+# products = Product.where(supplier_id: 0)
 
-products.each do |product|
-  product.supplier_id = rand(1..3)
-  product.save
-end
+# products.each do |product|
+#   product.supplier_id = rand(1..3)
+#   product.save
+# end
+
+# products = Product.where(supplier_id: 0)
+
+# products.each do |product|
+#   product.supplier_id = rand(1..3)
+#   product.save
+# end

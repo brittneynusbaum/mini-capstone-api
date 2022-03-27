@@ -86,6 +86,10 @@ GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNzQ1NTh9.qiEo1djcLCo6uiGuKNZicYG9Khn9btnNCKMf-8vL9Ic
 
 
+
+
+
+
 ######## shopping cart ######## 
 
 ### index all carted products
