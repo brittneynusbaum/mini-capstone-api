@@ -97,3 +97,6 @@ Content-Type: application/json
   "quantity": 1,
   "status": "Carted"
 }
+
+### destroy (admin only)
+DELETE http://localhost:3000/carted_products/1
