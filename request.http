@@ -90,7 +90,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgxNzQ1N
 
 ### index all carted products
 GET http://localhost:3000/carted_products.json
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
 
 ### create carted product
 POST http://localhost:3000/carted_products.json

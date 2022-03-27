@@ -1,8 +1,9 @@
 class CartedProductsController < ApplicationController
 
   def index
-    carted_products = CartedProduct.all
+    carted_products = current_user.carted_products
     render json: carted_products.as_json
+     
   end
   
   def create
