@@ -4,8 +4,10 @@ class OrdersController < ApplicationController
 
   def create
     carted_products = CartedProduct.find_by(status: "Carted")
-    product = Product.find_by(id: carted_products.product_id)
-    calculated_subtotal = product.price * carted_products.quantity
+    products = Product.find_by(id: carted_products.product_id)
+    products.each do |product|
+      calculated_subtotal = product.price * carted_product.quantity
+    end
     calculated_tax = calculated_subtotal * 0.09
     
     order = Order.new(
