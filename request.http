@@ -29,7 +29,7 @@ content-type: application/json
 }
 
 ### destroy (admin only)
-DELETE http://localhost:3000/products/17
+DELETE http://localhost:3000/products/17.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
 
 
@@ -69,13 +69,8 @@ Content-Type: application/json
 
 ### order create (must be logged in)
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDgwNTU3MzN9.JcheETaUr4gRT_vdGR7vmG2uuEBAEfBva3PGENOWy-A
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
 
-{
-  "product_id": "2",
-  "quantity": 5
-}
 
 ### show one order (user logged in)
 GET http://localhost:3000/orders/1.json
@@ -107,4 +102,4 @@ Content-Type: application/json
 }
 
 ### destroy - remove carted product
-DELETE http://localhost:3000/carted_products/1
+DELETE http://localhost:3000/carted_products/1.json
