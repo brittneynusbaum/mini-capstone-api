@@ -5,30 +5,10 @@ User.create!([
   {name: "Sam", email: "sam@theonering", password_digest: "$2a$12$XhVebuCUEvwHKKf54nfbwuHNFqyUTga45Qd.QawmONK42hlN/w9V.", admin: true},
   {name: "Luke Skywalker", email: "luke@rebelalliance.com", password_digest: "$2a$12$1pJzrJ7KEzjXWs/quYr11.6.rDccdbN0FbgY9Z0niJjq6RUPW7FUu", admin: false}
 ])
-Image.create!([
-  {url: "https://sc04.alicdn.com/kf/HTB1rrK4A2uSBuNkHFqDq6xfhVXaA.jpg", product_id: nil},
-  {url: "https://m.media-amazon.com/images/I/71hlZVUtDuL._AC_UL1500_.jpg", product_id: nil},
-  {url: "https://www.hearthsong.com/medias/sys_master/images/images/hee/hb7/8799031590942/730337-HSSU16-AF2958.jpg", product_id: 8}
-])
-Category.create!([
-  {name: "Clothing"},
-  {name: "Electronics"},
-  {name: "Kitchen"},
-  {name: "Sporting Goods"},
-  {name: "Home"},
-  {name: "Hobbies"}
-])
 Supplier.create!([
   {name: "All the clothes Inc.", email: "allclothes@gmail.com", phone_number: "22222222"},
   {name: "Decor R' Us", email: "decor@rus.com", phone_number: "5555555"},
   {name: "Tech Central", email: "techcentral@gmail.com", phone_number: "3333333"}
-])
-CartedProduct.create!([
-  {user_id: 4, product_id: 10, quantity: 1, status: "Carted", order_id: nil},
-  {user_id: 4, product_id: 15, quantity: 3, status: "Carted", order_id: nil},
-  {user_id: 4, product_id: 4, quantity: 1, status: "Carted", order_id: nil},
-  {user_id: 4, product_id: 8, quantity: 1, status: "Carted", order_id: nil},
-  {user_id: 4, product_id: 9, quantity: 1, status: "Carted", order_id: nil}
 ])
 Product.create!([
   {name: "Umbrella", price: "75.99", description: "For those days when you need to be ready for rain or a jedi dual.", quantity: 15, supplier_id: 1},
@@ -46,15 +26,35 @@ Product.create!([
   {name: "Pizza Pool Float", price: "250.5", description: "It's a pizza pool float, need we say more?", quantity: 15, supplier_id: 2},
   {name: "T-shirt", price: "25.0", description: "Want everyone to know you're a coder without saying a\n  word? Say no more - we've got the shirt for you!", quantity: 13, supplier_id: 2}
 ])
-CategoryProduct.create!([
-  {product_id: 3, category_id: 4},
-  {product_id: 3, category_id: 6},
-  {product_id: 13, category_id: 3},
-  {product_id: 13, category_id: 4}
+Image.create!([
+  {url: "https://sc04.alicdn.com/kf/HTB1rrK4A2uSBuNkHFqDq6xfhVXaA.jpg", product_id: 13},
+  {url: "https://m.media-amazon.com/images/I/71hlZVUtDuL._AC_UL1500_.jpg", product_id: 11},
+  {url: "https://www.hearthsong.com/medias/sys_master/images/images/hee/hb7/8799031590942/730337-HSSU16-AF2958.jpg", product_id: 8}
+])
+Category.create!([
+  {name: "Clothing"},
+  {name: "Electronics"},
+  {name: "Kitchen"},
+  {name: "Sporting Goods"},
+  {name: "Home"},
+  {name: "Hobbies"}
 ])
 Order.create!([
   {user_id: 2, subtotal: "10.0", tax: "0.05", total: "10.05"},
   {user_id: 4, subtotal: "10.0", tax: "0.05", total: "10.05"},
   {user_id: 4, subtotal: "5004.95", tax: "0.09", total: "450.45"},
   {user_id: 4, subtotal: "30000.0", tax: "2700.0", total: "32700.0"}
+])
+CartedProduct.create!([
+  {user_id: 4, product_id: 10, quantity: 1, status: "Carted", order_id: nil},
+  {user_id: 4, product_id: 15, quantity: 3, status: "Carted", order_id: nil},
+  {user_id: 4, product_id: 4, quantity: 1, status: "Carted", order_id: nil},
+  {user_id: 4, product_id: 8, quantity: 1, status: "Carted", order_id: nil},
+  {user_id: 4, product_id: 9, quantity: 1, status: "Carted", order_id: nil}
+])
+CategoryProduct.create!([
+  {product_id: 3, category_id: 4},
+  {product_id: 3, category_id: 6},
+  {product_id: 13, category_id: 3},
+  {product_id: 13, category_id: 4}
 ])
