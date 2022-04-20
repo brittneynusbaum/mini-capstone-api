@@ -7,7 +7,7 @@ class Category < ApplicationRecord
   #   products.each do |p|
   #     categories << p.category_products
   #   end 
-  end
+  # end
 end
 
 
