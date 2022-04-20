@@ -9,6 +9,8 @@ class OrdersController < ApplicationController
       if carted_product.status == "Carted"
         products = Product.find_by(id: carted_product.product_id)
         calculated_subtotal = products.price * carted_product.quantity
+        carted_product.status = "Purchased"
+        # carted_product.order_id = order.id
       end
     end
     
@@ -20,7 +22,7 @@ class OrdersController < ApplicationController
       tax: calculated_tax,
       total: calculated_subtotal + calculated_tax
     )
-    order.save 
+    # order.save 
     render json: order.as_json
   end
 

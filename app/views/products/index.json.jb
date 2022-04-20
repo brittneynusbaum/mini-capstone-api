@@ -6,7 +6,7 @@
     description: product.description,
     created_at: product.created_at,
     updated_at: product.updated_at,
-    inventory: product.inventory,
+    quantity: product.quantity,
     supplier_id: product.supplier_id
   }
 end

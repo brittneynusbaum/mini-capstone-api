@@ -8,7 +8,7 @@ GET http://localhost:3000/products/8.json
 
 ### create product (admin only)
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDk5MTYxMjF9.TvVFERuEoFP6nf03F7oyB1gKyuPVr79s70eHp8bgzSk
 content-type: application/json
 
 {
@@ -20,18 +20,17 @@ content-type: application/json
 }
 
 ### update product (admin only)
-PATCH http://localhost:3000/products/16.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
+PATCH http://localhost:3000/products/18.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDk5MTYxMjF9.TvVFERuEoFP6nf03F7oyB1gKyuPVr79s70eHp8bgzSk
 content-type: application/json
 
 {
-  "description": "The perfect sword for all Hobbits!"
+  "description": "Testing this route"
 }
 
 ### destroy (admin only)
-DELETE http://localhost:3000/products/17.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNjA2Mzd9.rzLRA_cxhucq2vxTA73E0VCE1Dj0bgdBxsQjIoYZkp0
-
+DELETE http://localhost:3000/products/18.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDk5MTYxMjF9.TvVFERuEoFP6nf03F7oyB1gKyuPVr79s70eHp8bgzSk
 
 
 
@@ -69,17 +68,16 @@ Content-Type: application/json
 
 ### order create (must be logged in)
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDk5MTYyNzl9.OlU_Cx_eEC62h7YUcy3mIggSGu7bUpUEyXsG1W91H_0
 
 
 ### show one order (user logged in)
-GET http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNjE4MDl9.oT03l0lJRxqrXS230cGfd3d11kWoTQWVBMyOzxQIthg
+GET http://localhost:3000/orders/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDk5MTYyNzl9.OlU_Cx_eEC62h7YUcy3mIggSGu7bUpUEyXsG1W91H_0
 
 ### index all orders (user logged in)
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDk5MTYyNzl9.OlU_Cx_eEC62h7YUcy3mIggSGu7bUpUEyXsG1W91H_0
 
 
 
@@ -89,16 +87,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5N
 
 ### index all carted products
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDk5MTYyNzl9.OlU_Cx_eEC62h7YUcy3mIggSGu7bUpUEyXsG1W91H_0
 
 ### create carted product
 POST http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDg0OTc5Njl9.S_kxhsHkhgZTaGJ0W7vQXmAxW8q5z4Pe8Bf7cHVhCQE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDk5MTYyNzl9.OlU_Cx_eEC62h7YUcy3mIggSGu7bUpUEyXsG1W91H_0
 Content-Type: application/json
 
 {
-  "product_id": 15,
-  "quantity": 3
+  "product_id": 9,
+  "quantity": 1
 }
 
 ### destroy - remove carted product
